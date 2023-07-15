@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(148, 151, 160);
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid black;
+            width: 700px;
+            /* height: 300px; */
+            border-radius: 20px;
+        }
+        .container h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: monospace;
+            margin: 0;
+            background-color: yellow;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            padding: 10px;
+        }
+        .container h2 {
+            text-align: center;
+            font-size: 30px;
+            font-family: monospace;
+        }
+        .container #volume{
+            /* background-color: #ddd; */
+            text-align: center;
+            color: red;
+        }
+        .container audio {
+            padding: 10px;
+            margin-left: 150px;
+            /* width: 40%; */
+        }
+        .container .button{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        .container button{
+            width: 15%;
+            height: 30px;
+        }
+        .container input{
+            /* background-color: black; */
+            margin-left: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nghe nhạc theo yêu cầu</h1>
+        <hr>
+        <h2 id="upfile">The Kid LAROI, Justin Bieber - STAY</h2>
+        <audio src="../PS26461-PhamTheTinh-Lab8/bainhacbai1.mp3" id="nhac" controls></audio>
+        <div id="volume"></div><br>
+        <hr>
+        <div class="button">
+            <button onclick="play()">
+                Play
+            </button>
+            <button onclick="pause()">
+                Pause
+            </button>
+            <button onclick="vol1()">
+                Vol+
+            </button>
+            <button onclick="vol2()">
+                Vol-
+            </button>
+            <button onclick="mute()">
+                Mute
+            </button>
+        </div>
+        <input type="file" onchange="chonfile()">
+    </div>
+</body>
+
+</html>
+<script>
+    var audio = document.getElementById("nhac");
+    var vol = document.getElementById("volume");
+    audio.addEventListener('ended', function () {
+        vol.innerText = "";
+    })
+    function play() {
+        audio.play();
+        vol.innerText = "Số giây " + audio.duration;
+    }
+    function pause() {
+        audio.pause();
+    }
+    function mute() {
+        audio.muted = !audio.muted;
+    }
+    function vol1() {
+        if (audio.volume >= 1) return;
+        audio.volume = (audio.volume + 0.1).toFixed(1);
+        vol.innerText = "Volume = " + audio.volume;
+    }
+    function vol2() {
+        if (audio.volume <= 0) return;
+        audio.volume = (audio.volume - 0.1).toFixed(1);
+        vol.innerText = "Volume = " + audio.volume;
+    }
+    function chonfile() {
+        var file = event.target.files[0];
+        console.log(file);
+        fileURL = window.URL.createObjectURL(file);
+        document.getElementById('nhac').src = fileURL;
+        document.getElementById('upfile').innerText = "Bài hát bạn tự chọn";
+    }
+</script>

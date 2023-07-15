@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+        }
+        .container h1{
+            text-align: center;
+            font-family: monospace;
+            border: 1px solid black;
+            margin: 0;
+            padding: 10px;
+            background-color: yellow;
+        }
+        .container #countdown {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+            width: 700px;
+            height: 300px;
+            background-color: white;
+            font-size: 30px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Đếm ngược tới 2023</h1>
+        <div id="countdown">
+            <script>setInterval('countdown()', 1000);</script>
+        </div>
+    </div>
+    <script>
+        function countdown() {
+            let ed = "2023-01-22";
+            let endDate = new Date(ed);
+            let now = new Date;
+            let miligiay = (endDate - now);
+            let sogiay = Math.floor((miligiay / 1000) % 60);
+            let sophut = Math.floor((miligiay / 1000 / 60) % 60);
+            let sogio = Math.floor((miligiay / 1000 / 60 / 60) % 24);
+            let songay = Math.floor(miligiay / 1000 / 60 / 60 / 24);
+            let str = `<span><b>${songay}</b> ngày</span>
+            <span><b>${sogio}</b> giờ</span>
+            <span><b>${sophut}</b> phút</span>
+            <span><b>${sogiay}</b> giây</span>
+            `;
+            document.getElementById("countdown").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

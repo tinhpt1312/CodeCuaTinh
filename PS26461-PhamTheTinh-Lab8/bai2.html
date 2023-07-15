@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            font-family: monospace;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid black;
+            width: 700px;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .container .p1 {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .p1 input {
+            padding: 10px;
+            width: 100px;
+            font-size: 15px;
+        }
+
+        .container #noidung {
+            font-size: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container .p2 {
+            border-top: 1px solid black;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container .p2 input:nth-child(1) {
+            width: 300px;
+            margin-right: 30px;
+            padding: 0 20px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="tenbh">Bài hát: Đôi Bờ</h2>
+        <div class="p1"><input type="button" onclick="batdau()" value="Bắt đầu"></div>
+        <div id="noidung" onclick="chaychu()"></div>
+        <div class="p2">
+            <input type="number" id="speed" placeholder="Nhập tốc độ chạy">
+            <input type="button" onclick="thaydoi()" value="Thay đổi tốc độ">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var i = 0;
+    var baihat = `Đêm qua anh mơ thấy em yêu đến trong mộng buồn 
+                Dĩ vãng thoáng tới đốt cháy trái tim thương em 
+                Khóe mắt đẫm ướt mái tóc xõa mới chấm ngang vai cho anh thương em ngàn đời 
+                Anh kêu tên em qua vùng biển sóng chân trời 
+                Bóng con thuyền vượt nghìn trùng lệ trào dâng 
+                Lời anh kêu tan trong gió reo sóng dâng bao la
+                Kể từ đây
+                Mãi mãi mất nhau
+                Mãi mang thương đau cho mây đen giăng mờ
+                Để duyên ngâu chia đôi bờ, tình mãi mong chờ`;
+    var tocdo = 50;
+    var chay = null;
+    function thaydoi() {
+        document.getElementById("noidung").innerText = "";
+        tocdo = document.getElementById("speed").value;
+        chay = null;
+        i = 0;
+        baihat = `Siuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu`;
+    }
+    function batdau() {
+        chay = setInterval(chaychu, tocdo);
+    }
+    function chaychu() {
+        if (i < baihat.length) {
+            document.getElementById("noidung").innerHTML += baihat.charAt(i);
+            i++;
+        }
+    }
+
+</script>

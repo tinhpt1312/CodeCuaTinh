@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script>
+        function checklogin() {
+            if (document.flogin.u.value == '') {
+                alert("Bạn chưa nhập username");
+                document.flogin.u.focus(); //Chọn đối tượng u
+                return false;   // Chặn form không cho submit
+            }
+            if (document.flogin.p.value == '') {
+                alert("Bạn chưa nhập password");
+                document.flogin.p.focus();	//Chọn đối tượng p
+                return false;
+            }
+            return true; // Cho submit form khi đã kiểm tra xong
+        }
+
+    </script>
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 100vh;
+            background-color: rgb(177, 216, 216);
+        }
+        .container{
+            background-color: white;
+            width: 500px;
+            padding: 20px;
+            border: 1px solid #333;
+            position: relative;
+
+        }
+        .container form input{
+            width: 300px;
+            height: 30px;
+            padding: 0 30px;
+            margin: 10px;
+            outline: none;
+            border: none;
+            border-bottom:1px solid #333;
+        }
+        .container form input:focus{
+            border-color: blue;
+        }
+        .container form #i1{
+            position: absolute;
+            left: 30px;
+            top: 133px;
+        }
+        .container form #i2{
+            position: absolute;
+            left: 30px;
+            top: 200px;
+        }
+        .container form button{
+            margin-left: 100px;
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form name="flogin" method="post" action="xulylogin.php">
+            <i class="uil uil-user" id="i1"></i>
+            Username:<br /> <input name="u" id="u" type="text" /> <br />
+            <i class="uil uil-lock" id="i2"></i>
+            Password:<br /> <input name="p" id="p" type="password" /> <br />
+            <button name="sub" id="sub" value="Login" onclick="checklogin()" /> Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

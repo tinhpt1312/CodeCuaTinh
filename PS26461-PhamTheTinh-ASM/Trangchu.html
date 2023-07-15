@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop bán hàng của Chích</title>
+    <link rel="stylesheet" href="../PS26461-PhamTheTinh-ASM/css/trangchu.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="contrainer">
+        <div class="container-nav">
+            <a href="#" class="logo">
+                <img src="../PS26461-PhamTheTinh-ASM/images/LOGO1.png" width="20%">
+            </a>
+            <div class="menu">
+                <div class="items">
+                    <a href="#">Trang chủ</a>
+                </div>
+                <div class="items">
+                    <a href="#">Sản phẩm</a>
+                </div>
+                <div class="items">
+                    <a href="#">Về chúng tôi</a>
+                </div>
+                <div class="items">
+                    <a href="#">Góp ý</a>
+                </div>
+            </div>
+            <div class="action">
+                <div class="items">
+                    <a href="../PS26461-PhamTheTinh-ASM/thanhtoan.html"><i class="uil uil-user"></i></a>
+                </div>
+                <div class="items">
+                    <i onclick="showhide()" class="uil uil-shopping-cart-alt">(<span id="countcart">0</span>)</i>
+                    <div id="giohang">
+                        <table class="pure-table pure-table-horizontal" border="none">
+                            <tr style="background-color: #888888; color: white;">
+                                <th>Order</th>
+                                <th>Product Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
+                            </tr>
+                            <tbody id="mycart">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-header">
+            <img src="../PS26461-PhamTheTinh-ASM/images/cover2.png" width="100%" id="hinh">
+            <div class="left-items">
+                <i class="uil uil-arrow-circle-left" onclick="prev()"></i>
+            </div>
+            <div class="right-items">
+                <i class="uil uil-arrow-circle-right" onclick="next()"></i>
+            </div>
+            <div class="to-bottom">
+                <a href="#">
+                    <img src="../PS26461-PhamTheTinh-ASM/images/bottom-circle.png" width="9%">
+                </a>
+            </div>
+        </div>
+        <div class="container-aricle">
+            <div class="list-sp">
+                <h2>Sản phẩm của chúng tôi</h2>
+                <div class="hr"></div>
+                <ul class="product">
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/1,1.png" class="img" id="hinh1" width="80%"
+                            onmouseover="fover()" onmouseout="fout()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 1</div>
+                        <div class="price" id="price" data-price="100.000">100.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/2,1.png" id="hinh2" width="80%"
+                            onmouseover="fover1()" onmouseout="fout1()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 2</div>
+                        <div class="price" id="price" data-price="200.000">200.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/3,1.png" id="hinh3" width="80%"
+                            onmouseover="fover2()" onmouseout="fout2()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 3</div>
+                        <div class="price" id="price" data-price="300.000">300.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/4,1.png" id="hinh4" width="80%"
+                            onmouseover="fover3()" onmouseout="fout3()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 4</div>
+                        <div class="price" id="price" data-price="400.000">400.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+
+
+                </ul>
+
+                <ul class="product">
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/5,1.png" id="hinh5" width="80%"
+                            onmouseover="fover4()" onmouseout="fout4()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 5</div>
+                        <div class="price" id="price" data-price="100.000">100.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/6,1.png" id="hinh6" width="80%"
+                            onmouseover="fover5()" onmouseout="fout5()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 6</div>
+                        <div class="price" id="price" data-price="200.000">200.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/7,1.png" id="hinh7" width="80%"
+                            onmouseover="fover6()" onmouseout="fout6()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 7
+                        </div>
+                        <div class="price" id="price" data-price="300.000">300.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+                    <div class="imgaess" onmouseover="hienicon(this)" onmouseout="anicon(this)">
+                        <img src="../PS26461-PhamTheTinh-ASM/images/8,1.png" id="hinh8" width="80%"
+                            onmouseover="fover7()" onmouseout="fout7()">
+                        <div class="name" id="name">Áo thun thể thao mẫu 8</div>
+                        <div class="price" id="price" data-price="400.000">400.000</div>
+                        <input type="button" value="Add Cart" onclick="addcart(this)">
+                        <div class="icon" id="icon">
+                            <i class="uil uil-thumbs-up"></i>
+                            <i class="uil uil-plus"></i>
+                            <i class="uil uil-shopping-bag"></i>
+                        </div>
+                    </div>
+
+
+
+                </ul>
+            </div>
+
+
+
+            <div class="list-page">
+                <div class="items">
+                    <a href="#">1</a>
+                </div>
+                <div class="items">
+                    <a href="#">2</a>
+                </div>
+                <div class="items">
+                    <a href="#">3</a>
+                </div>
+                <div class="items">
+                    <a href="#">4</a>
+                </div>
+            </div>
+
+
+            <div class="saleoff">
+                <div class="box-left">
+                    <h1>
+                        <p>BLACK FRIDAY</p>
+                        <p>Mua 1 tặng 1</p>
+                    </h1>
+                </div>
+                <div class="box-right"></div>
+            </div>
+
+
+
+            <div class="comment">
+                <h2>Ý kiến người dùng</h2>
+                <div class="hr"></div>
+                <img src="../PS26461-PhamTheTinh-ASM/images/comment1 (1).png" id="comment" width="100%">
+                <div class="box-left">
+                    <i class="uil uil-angle-left-b" onclick="prev1()"></i>
+                </div>
+                <div class="box-right">
+                    <i class="uil uil-angle-right-b" onclick="next1()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container-footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="../PS26461-PhamTheTinh-ASM/images/LOGO1.png" width="30%">
+                    <p>Cung cấp tới tay quý khách những sản phẩm tốt nhất thị trường</p>
+
+                </div>
+                <div class="intern">
+                    <p><a href="https://www.facebook.com/ptt1312"><img
+                                src="../PS26461-PhamTheTinh-Lab1/365-3652236_facebook-round-logo-png-transparent-background-fogo-facebook.png"
+                                width="6%"></a>
+                        <a href="https://www.instagram.com/thetinh.itsmeeee/"><img
+                                src="../PS26461-PhamTheTinh-Lab1/—Pngtree—instagram icon instagram logo_3584852.png"
+                                width="6%"></a>
+                        <a href="https://chat.zalo.me/?null"><img src="../PS26461-PhamTheTinh-Lab1/pngwing.com.png"
+                                width="6%"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <h3 style="color: orangered;">Các chi nhánh cửa hàng</h3> <br>
+                <div class="quick-menu">
+                    <div class="items">
+                        <span><em>Store 1 :</em> <br>
+                            <i class="uil uil-map-marker-alt"></i>: đường 154, phường Tân Phú, Thành phố Thủ Đức, Thành
+                            phố Hồ Chí Minh
+                        </span><br>
+                        <span><i class="uil uil-phone"></i>: 0339444203</span>
+                    </div><br>
+                    <div class="items">
+                        <span><em>Store 2 :</em> <br>
+                            <i class="uil uil-map-marker-alt"></i>: đường 154, phường Tân Phú, Thành phố Thủ Đức, Thành
+                            phố Hồ Chí Minh
+                        </span><br>
+                        <span><i class="uil uil-phone"></i>: 0339444203</span>
+                    </div><br>
+                    <div class="items">
+                        <span>Store 3 : <br>
+                            <i class="uil uil-map-marker-alt"></i>: đường 154, phường Tân Phú, Thành phố Thủ Đức, Thành
+                            phố Hồ Chí Minh
+                        </span><br>
+                        <span><i class="uil uil-phone"></i>: 0339444203</span>
+                    </div><br>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <form action="">
+                    <input type="email" placeholder="Địa chỉ Email"> <br>
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../PS26461-PhamTheTinh-ASM/js/trangchu.js"></script>
+</body>
+
+</html>

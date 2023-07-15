@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+.container {
+    width: 1000px;
+    height: 100vh;
+}
+
+.container-nav {
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 80px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu .items {
+    margin: 0 40px;
+    width: 100px;
+}
+
+.menu .items a{
+    text-decoration: none;
+    color: rgb(177, 19, 92);
+}
+
+.menu .items a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.action{
+    display: flex;
+}
+
+
+.action .items{
+    margin-left: 50px;
+    width: 60px;
+}
+
+.action .items:nth-child(1):hover{
+    color: blue;
+}
+
+.container-header img{
+    margin-top: 45px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.container-header .left-items{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+
+.container-header .right-items{
+    position: absolute;
+    top: 60%;
+    right: 5%;
+}
+
+.container-header .left-items, .container-header .right-items{
+    font-size: 30px;
+} 
+
+.container-header .right-items:hover{
+    color: rgb(69, 138, 230);
+}
+.container-header .left-items:hover{
+    color: rgb(69, 138, 230);
+} 
+
+.container-header .to-bottom a img{
+    position: absolute;
+    left: 45%;
+    bottom: -74px;
+}
+
+
+
+
+.container-aricle {
+    padding-top: 116px;
+    padding-bottom: 78px;
+    overflow: hidden;
+}
+
+.container-aricle .list-sp h2{
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 32px;
+    color: rgb(177, 19, 92);
+}
+
+.container-aricle .list-sp .hr{
+    border: 1px solid rgb(177, 19, 92);
+    background-color: rgb(177, 19, 92);
+    margin-bottom: 76px;
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-sp .product{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.list-sp .product .imgaess{
+    margin: 0 10px;
+    box-shadow: 0 0 2px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    height: 510px;
+    position: relative;   
+    /* background-color: red;  */
+}
+
+.list-sp .product .imgaess img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    overflow: hidden;
+
+}
+
+.list-sp .product .imgaess .icon{
+    font-size: 32px;
+    width: 32px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+.list-sp .product .imgaess .name{
+    text-align: center;
+    color: rgb(48, 42, 31);
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.list-sp .product .imgaess input{
+    background-color: rgb(1, 1, 22);
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 105px;
+    outline: none;
+    border-color: #ddd;
+    border-radius: 30px;
+}
+
+.list-sp .product .imgaess .price{
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    margin-top: 13px;
+}
+
+.list-page{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.list-page .items{
+    margin: 0 20px;
+    width: 37px;
+    height: 37px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.list-page .items a{
+    color: white;
+    text-decoration: none;
+}
+
+.list-page .items:hover{
+    background-color: white;
+    border: 1px solid;
+}
+
+.list-page .items a:hover{
+    color: #000;
+}
+
+.saleoff{
+    width: 100%;
+    display: flex;
+    height: 300px;
+    margin-top: 80px;
+}
+
+.saleoff .box-left, .saleoff .box-right{
+    width: 50%;
+}
+
+.saleoff .box-left{
+    background-color: rgb(39, 58, 57);
+}
+.saleoff .box-left h1{
+    padding-top: 38px;
+    text-align: center;
+
+}
+
+.saleoff .box-left p:nth-child(1){
+    color: #fff;
+    font-size: 50px;
+}
+
+.saleoff .box-left p:nth-child(2){
+    color: red;
+    font-size: 80px;
+}
+
+
+.saleoff .box-right{
+    background: url(../images/cover3.png);
+    background-size: 100% 100%;
+
+}
+.container-aricle .comment{
+    margin-top: 100px;
+    position: relative;
+}
+.container-aricle  .comment h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0;
+    color: rgb(177, 19, 92);    
+}
+
+.container-aricle  .comment .hr{
+    border: 1px solid rgb(177, 19, 92);
+    background-color: rgb(177, 19, 92);
+    margin-bottom: 76px;
+    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-aricle  .comment img{
+    margin-top: 45px;
+    padding: 0 40px;
+    
+}
+
+.container-aricle  .comment .box-left{
+    position: absolute;
+    left: 5%;
+    top: 55%;
+    font-size: 32px;
+    color: #fff;
+}
+
+.container-aricle  .comment .box-left:hover{
+    color: black;
+}
+
+.container-aricle  .comment .box-right{
+    position: absolute;
+    right: 5%;
+    top: 56%;
+    font-size: 32px;
+    color: #fff;
+}
+
+.container-aricle  .comment .box-right:hover{
+    color: black;
+}
+
+.container-footer{
+    width: 100%;
+    background-color: #192041;
+    height: 500px;
+    margin-top: 80px;
+    padding: 0 30px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 32.5% 32.5% 33%;
+    grid-column-gap: 1%;
+    /*display: flex; */
+    color: white;
+}
+
+
+
+.container-footer .box .logo{
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container-footer .box .intern{
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    background-size: 30px;
+}
+
+.container-footer .box .intern a img{
+    width: 10%;
+}
+
+.container-footer .box .quick-menu .items span i{
+    color: orangered;
+}
+
+.container-footer .box h3{
+    color: orangered;
+}
+
+.container-footer .box h3,form{
+    text-align: center;
+}
+
+.container-footer .box form input{
+    margin-top: 20px;
+    width: 294px;
+    height: 42px;
+    background: transparent;
+    padding-left: 20px;
+    color: white;
+}
+
+.container-footer .box form button{
+    background: gray;
+    box-shadow: 5px 5px 4px black;
+    width: 163px;
+    height: 38px;
+    margin-top: 20px;
+    color: white;
+}
+
+
+table {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    top: 120px;
+    right: 20px;
+    border-collapse: collapse;
+    width: 800px;
+    /* position: relative; */
+  }
+  table img {
+    width: 100px;
+    height: 147px;
+  }
+
+  table button{
+    border: 1px solid white;
+    outline: none;
+    color: red;
+  }
+
+  table button:hover{
+    color:black;
+  }

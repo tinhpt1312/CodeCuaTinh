@@ -1,0 +1,37 @@
+<style>
+    .container {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        margin: auto;
+        background: darkkhaki;
+    }
+
+    #show {
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        background: darkblue;
+        width: 120px;
+        height: 120px;
+    }
+</style>
+<div class="container">
+    <button onclick="goRight()">Go Right</button>
+    <button onclick="goLeft()">Go Left</button>
+    <div id="show"></div>
+</div>
+<script>
+    function goRight() {
+        var sh = document.getElementById("show");
+        var left = 0;
+        setInterval(
+            function () {
+                if (left == 600) clearInterval();
+                else {
+                    left++;
+                    sh.style.left = left + "px";
+                }
+            }, 10)
+    }
+</script>

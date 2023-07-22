@@ -1,0 +1,67 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        border: 1px solid black;
+        background-color: #ddd;
+    }
+    .stars {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .star {
+        font-size: 3em;
+        color: #333;
+        display: inline-block;
+       
+    }
+
+    .orange {
+        color: orange
+    }
+
+    .output {
+        width: 500px;
+        font-size: 2em;
+        text-align: center;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ul class="stars">
+            <li class="star">&#10029; </li>
+            <li class="star">&#10029; </li>
+            <li class="star">&#10029; </li>
+            <li class="star">&#10029; </li>
+            <li class="star">&#10029; </li>
+        </ul>
+        <div class="output"></div>
+    </div>
+</body>
+
+<script>
+    var output = document.querySelector(".output");
+    const stars = document.querySelectorAll(".star");
+    stars.forEach(
+        (star, index) => {
+            star.starvalue = index + 1;
+            star.addEventListener('click', starRate);
+        }
+    )
+    function starRate(e) {
+        output.innerHTML = `Bạn đánh giá ${e.target.starvalue} sao `;
+        stars.forEach(
+            (star, index) => {
+                if (index < e.target.starvalue) star.classList.add('orange');
+                else star.classList.remove('orange')
+            }
+        )
+    }
+</script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:monospace;
+            background-color: rgb(175, 213, 235);
+        }
+        .container{
+            border: 1px solid black;
+            width: 60%;
+            background-color: white;
+            /* height: 50%; */
+            padding: 20px;
+            box-shadow:  0 0 5px black;
+        }
+        .container-form{
+            /* background-color: red; */
+            height: 100%;
+        }
+        .container .container-form .container-sp{
+            /* background-color: #ddd; */
+            height: 50px;
+            padding: 0 15px;
+        }
+        .container .container-form .container-sp label{
+            font-size: 25px;
+            margin-right: 92px;
+        }
+        .container .container-form .container-sp input{
+            height: 60%;
+            width: 50%;
+            padding: 0 25px;
+            margin-top: 10px;
+            font-size: 20px;
+            outline: none;
+            border: 1px solid #ddd;
+        }
+        .container .container-form .container-loai{
+            /* background-color: grey; */
+            height: 50px;
+            padding: 0 15px;
+        }
+        .container .container-form .container-loai label{
+            font-size: 25px;
+            margin-right: 150px;
+        }
+        .container .container-form .container-loai select{
+            height: 60%;
+            width: 50%;
+            padding: 0 25px;
+            margin-top: 10px;
+            font-size: 15px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+        .container .container-form .container-dongia{
+            /* background-color: #ddd; */
+            height: 50px;
+            padding: 0 15px;
+        }
+        .container .container-form .container-dongia label{
+            font-size: 25px;
+            margin-right: 110px;
+        }
+        .container .container-form .container-dongia input{
+            height: 60%;
+            width: 50%;
+            padding: 0 25px;
+            margin-top: 10px;
+            font-size: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .container .container-form .container-diachi{
+            /* background-color: grey; */
+            height: 50px;
+            padding: 0 15px;
+            /* display: flex;
+            justify-content: space-around; */
+        }
+        .container .container-form .container-diachi label{
+            font-size: 20px;
+            margin-right: 100px;
+        }
+        .container .container-form .container-diachi input{
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .container .container-form .container-ship{
+            /* background-color: #ddd; */
+            height: 50px;
+            padding: 0 15px;
+        }
+        .container .container-form .container-ship label{
+            font-size: 20px;
+            margin-right: 55px;
+        }
+        .container .container-form .container-ship input{
+            height: 60%;
+            width: 50%;
+            padding: 0 25px;
+            margin-top: 10px;
+            font-size: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+        .container .container-form .container-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .container .container-form .container-button input{
+            padding: 0 25px;
+            font-size: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+            height: 30px;
+        }
+        .container .container-form .container-ship input:focus,
+        .container .container-form .container-dongia input:focus,
+        .container .container-form .container-sp input:focus,
+        .container .container-form .container-loai select:focus {
+            border-color: blue;
+        }
+
+        #kq{
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-form">
+            <form action="">
+                <div class="container-sp">
+                    <label for="">Sản phẩm: </label>
+                    <input type="text" placeholder="Nhập tên sản phẩm" id="tensp">
+                </div>
+                <div class="container-loai">
+                    <label for="">Loại: </label>
+                    <select name="" id="loai">
+                        <option value="">Chọn loại sản phẩm</option>
+                        <option value="">Điện thoại</option>
+                        <option value="">Laptop</option>
+                        <option value="">Xe máy</option>
+                    </select>
+                </div>
+                <div class="container-dongia">
+                    <label for="">Đơn giá: </label>
+                    <input type="text" placeholder="Nhập đơn giá" id="gia">
+                </div>
+                <div class="container-diachi">
+                    <label for="">Nơi nhận hàng: </label>
+                    <input type="radio" name="diachi" onclick="hienthi(false)"> <label for="">Nội thành</label>
+                    <input type="radio" name="diachi" onclick="hienthi(true)"> <label for="">Ngoại thành</label>
+                </div>
+                <div class="container-ship" id="vc">
+                    <label for="">Phí vận chuyển: </label>
+                    <input type="text" value="100000" id="phi_vc">
+                </div>
+                <div class="container-button">
+                    <input type="button" value="Đăng ký" onclick="kiemtra()">
+                </div>
+                <hr>
+                <div id="kq"></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function hienthi(v) {
+        vc = document.getElementById("vc");
+        vc.style.display = (v == true) ? "" : "none";
+    }
+
+    function kiemtra() {
+        thanhcong = true;
+        thongbao = "";
+        //code kiểm tra tên sp
+        var sp = document.getElementById("tensp");
+        if (sp.value.length == 0) {
+            thongbao += "Vui lòng nhập tên sản phẩm<br>";
+            thanhcong = false;
+        }
+        // kiểm tra giá
+        var gia = document.getElementById("gia");
+        if (gia.value == "") {
+            thongbao += "Bạn chưa nhập giá<br>";
+            thanhcong = false;
+        }
+        if (isNaN(gia).value == true) {
+            thongbao += "Vui lòng nhập số <br>";
+            thanhcong = false;
+        }
+        if (parseInt(gia.value) <= 0) {
+            thongbao += "Bạn phải nhập giá là số dương <br>";
+            thanhcong = false;
+        }
+        // kiểm tra loại sản phẩm
+        var loai = "";
+        if (loai.value == "") {
+            thongbao += "Vui lòng chọn loại sản phẩm";
+            thanhcong = false;
+        }
+        // kiểm tra nơi nhận hàng
+        var radios = document.getElementsByName("diachi");
+        if (radios[0].checked == false && radios[1].checked == false) {
+            thongbao += "Vui lòng chọn nơi giao hàng";
+            thanhcong = false;
+        }
+        if (thongbao == "") thongbao = "Nhập đúng dữ liệu";
+        document.getElementById("kq").innerHTML = thongbao;
+        return thanhcong;
+    }
+
+    document.getElementById("vc").style.display = "none";
+</script>

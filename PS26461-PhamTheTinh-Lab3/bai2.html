@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var f0 = prompt("Nhập f0: ");
+        var f1 = prompt("Nhập f1: ");
+        if (isNaN(f0) == true || isNaN(f1) == true) {
+            f0 = 1;
+            f1 = 2;
+        }
+    </script>
+    <style>
+        body {
+            width: auto;
+            height: 100vh;
+        }
+
+        .container {
+            border: 1px solid black;
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            border-radius: 15px;
+            height: 150px;
+        }
+
+        h2 {
+            background-color: yellow;
+            margin: 0;
+            padding: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .tinhpt {
+            cursor: pointer;
+
+        }
+        span{
+            text-align: center;
+            border: 1px solid black;
+            font-size: large;
+            border-radius: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Dãy Fibonacy</h2>
+        <div class="tinhpt">
+            <script>
+                var total = prompt('Nhâp độ dài bạn muốn');
+                if (total < 5 || total > 30) {
+                    alert('Độ dài chỉ được từ 5 tới 30! Nhập lại');
+                    total = prompt('Độ dài bạn muốn: ');
+                    for (var i = 0; i < total; i++) {
+                        var f = parseInt(f0) + parseInt(f1);
+                        f0 = f1;
+                        f1 = f;
+                        document.write("<span> " + f + " </span>");
+                    }
+                } else {
+                    for (var i = 0; i < total; i++) {
+                        var f = parseInt(f0) + parseInt(f1);
+                        f0 = f1;
+                        f1 = f;
+                        document.write("<span> " + f + " </span>");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

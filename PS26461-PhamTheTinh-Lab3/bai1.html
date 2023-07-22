@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: auto;
+            height: 100vh;
+        }
+
+        .container {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            width: 500px;
+            margin: auto;
+            border-radius: 15px;
+            font-size: xx-large;
+            font-family: monospace;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <script>
+            var so1 = prompt('Nhap so thu nhat: ');
+            var so2 = prompt('Nhap so thu 2: ');
+            var pheptinh = prompt('Nhap phep tinh: ');
+            if (isNaN(so1) == true || isNaN(so2) == true) {
+                alert('Nhập sai rồi! Nhập lại');
+                so1 = prompt('Nhap so thu nhat: ');
+                so2 = prompt('Nhap so thu 2: ');
+                switch (pheptinh) {
+                    case '+':
+                        var kq = parseInt(so1) + parseInt(so2);
+                        document.write("<p>Ket qua của " + so1 + " + " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '-':
+                        var kq = so1 - so2;
+                        document.write("<p>Ket qua của " + so1 + " - " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '*':
+                        var kq = so1 * so2;
+                        document.write("<p>Ket qua của " + so1 + " x " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '/':
+                        var kq = so1 / so2;
+                        document.write("<p>Ket qua của " + so1 + " / " + so2 + " = " + kq + "</p>");
+                        break;
+                    default:
+                        document.write("<p>Phép tính không hợp lệ</p>");
+                        break;
+                }
+            } else
+                switch (pheptinh) {
+                    case '+':
+                        var kq = parseInt(so1) + parseInt(so2);
+                        document.write("<p>Ket qua của " + so1 + " + " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '-':
+                        var kq = so1 - so2;
+                        document.write("<p>Ket qua của " + so1 + " - " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '*':
+                        var kq = so1 * so2;
+                        document.write("<p>Ket qua của " + so1 + " x " + so2 + " = " + kq + "</p>");
+                        break;
+                    case '/':
+                        var kq = so1 / so2;
+                        document.write("<p>Ket qua của " + so1 + " / " + so2 + " = " + kq + "</p>");
+                        break;
+                    default:
+                        document.write("<p>Phép tính không hợp lệ</p>");
+                        break;
+                }
+        </script>
+    </div>
+</body>
+
+</html>

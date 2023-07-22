@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var so1 = null;
+        var so2 = null;
+        var phepTinh = null;
+        var kq = null;
+        function ganso(number) {
+            if (so1 == null) {
+                so1 = number;
+                document.getElementById('so1').innerHTML = so1;
+            }
+            else if (so2 == null) {
+                so2 = number;
+                document.getElementById('so2').innerHTML = so2;
+            }
+        }
+        function ganpheptinh(x) {
+            phepTinh = x;
+            document.getElementById('dau').innerHTML = phepTinh;
+            console.log(x)
+        }
+        function thuc_hien() {
+            if (phepTinh == '+') kq = parseInt(so1) + parseInt(so2);
+            if (phepTinh == '-') kq = so1 - so2;
+            if (phepTinh == 'x') kq = so1 * so2;
+            if (phepTinh == '/') kq = parseInt(so1) / parseInt(so2);
+
+            document.getElementById('total').innerHTML = kq;
+            console.log(kq);
+        }
+        function lam_lai() {
+            so1 = null;
+            so2 = null;
+            phepTinh = null;
+            kq = null;
+
+            document.getElementById('so1').innerHTML = "";
+            document.getElementById('total').innerHTML = "";
+            document.getElementById('so2').innerHTML = "";
+            document.getElementById('dau').innerHTML = "";
+        }
+    </script>
+    <style>
+        body {
+            width: auto;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        button {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center; font-family: monospace;color: orangered;">
+        <h2>Máy tính cơ bản</h2>
+        <h3>Phạm Thế Tình</h3>
+    </div>
+    <table class="container">
+        <tr>
+            <td><button onclick="ganso(7)">7</button></td>
+            <td><button onclick="ganso(8)">8</button></td>
+            <td><button onclick="ganso(9)">9</button></td>
+            <td><button onclick="ganpheptinh('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="ganso(6)">6</button></td>
+            <td><button onclick="ganso(5)">5</button></td>
+            <td><button onclick="ganso(4)">4</button></td>
+            <td><button onclick="ganpheptinh('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="ganso(3)">3</button></td>
+            <td><button onclick="ganso(2)">2</button></td>
+            <td><button onclick="ganso(1)">1</button></td>
+            <td><button onclick="ganpheptinh('x')">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="ganso(0)">0</button></td>
+            <td><button onclick="lam_lai()">C</button></td>
+            <td><button onclick="thuc_hien()">=</button></td>
+            <td><button onclick="ganpheptinh('/')">:</button></td>
+        </tr>
+        <tr>
+            <td><button id="so1" style="background-color: blue; color: yellow;"></button></td>
+            <td><button id="dau" style="background-color: blue; color: yellow;"></button></td>
+            <td><button id="so2" style="background-color: blue; color: yellow;"></button></td>
+            <td><button id="total" style="background-color: blue; color: yellow;"></button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    document.getElementById("so1").innerHTML = so1;
+</script>

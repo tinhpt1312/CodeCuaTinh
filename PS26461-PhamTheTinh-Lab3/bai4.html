@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: auto;
+            font-family: monospace;
+            font-size: x-large;
+        }
+
+        select {
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 100px;
+            border: 2px solid black;
+            height: 200px;
+            width: 500px;
+            background-color: rgb(27, 122, 122);
+        }
+
+        .container .swapper {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dotted white;
+            height: 80%;
+            width: 90%;
+            margin-left: 30px;
+            color: white;
+        }
+        .swapper div{
+            float: left;
+            width: 33.33%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="swapper">
+                <div>
+                    <span>Ngày</span>
+                    <select name="" >
+                        <script>
+                            document.write("<option> " + 13 + "</option>");
+                            for(var i=0; i<31; i++){
+                                var j= i+1;
+                                if(i == 12){
+                                    j=null;
+                                }else{
+                                document.write("<option> " + j + "</option>");
+                                }
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div>
+                    <span>Tháng</span>
+                    <select name="" id="thang">
+                        <script>
+                            document.write("<option> " + 12 + "</option>");
+                            for(var i=0; i<12; i++){
+                                var j= i+1;
+                                if(i == 11){
+                                    j=null;
+                                }else{
+                                document.write("<option> " + j + "</option>");
+                                }
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div>
+                    <span>Năm</span><br>
+                    <select name="" id="nam">
+                        <script>
+                            document.write("<option> " + 2003 + "</option>");
+                            for(var i=1970; i<2022; i++){
+                                var j= i+1;
+                                if(i == 2002){
+                                    j=null;
+                                }else{
+                                document.write("<option> " + j + "</option>");
+                                }
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

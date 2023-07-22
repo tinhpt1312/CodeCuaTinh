@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Thế Tình - Ps26461</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: auto;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            border: 1px solid darkgrey;
+            border-radius: 15px;
+            position: relative;
+            background-color: blue;
+            margin-top: 100px;
+        }
+
+        header {
+            background-color: yellow;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-family: monospace;
+            font-size: large;
+        }
+
+        main {
+            background: rgb(218, 140, 214);
+            color:  white;
+            height: 100px;
+            text-align: center;
+            font-size: large;
+        }
+
+        footer {
+            border-top: 2px double orangered; 
+            font-size: small;
+            height: 40px;
+            text-align: center;
+            color: rgba(236, 234, 197, 0.904);
+        }
+        p{
+            margin: 0;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="chao" style="margin-left: 15px;">Chào bạn</div>
+            <div class="adu" style="margin-left: 15px; text-align: right;">
+                <script class="loichao">
+                    var n = new Date();
+                    var gio = n.getHours();
+                    if (gio < 12) document.write("Good Morning");
+                    else document.write("Good Afternoon");
+                </script>
+            </div>
+        </header>
+        <main>
+            <div><br><br>
+                <strong>Bây giờ là: </strong>
+                <script class="gio">
+                    var n = new Date();
+                    var gio = n.getHours();
+                    var phut = n.getMinutes();
+                    document.write(gio + ":" + phut);
+                </script>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p><span>Họ và tên: </span><strong><span id="ten"></span></strong></p>
+                <p><span>Email: </span><strong><span id="mail"></span></strong></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script>
+    var ten = prompt("Tên của bạn: ");
+    var mail = prompt("Email: ");
+    document.getElementById("ten").innerHTML = ten;
+    document.getElementById("mail").innerHTML = mail;
+</script>

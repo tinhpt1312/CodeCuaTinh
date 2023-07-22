@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const pi = 3.14;
+        const bankinh = prompt('Nhap ban kinh');
+    </script>
+</head>
+
+<body>
+    <div
+        style="border: 1px solid black; border-radius:15px; width:500px; margin:auto; margin-top:200px; text-align:center;">
+        <h2
+            style="background-color: grey; margin-top: 0; padding: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; color: white; font-family: monospace;">
+            CÔNG THỨC HÌNH TRÒN</h2>
+        <script>
+            if (isNaN(bankinh) == true) {
+                document.write("<p>Nhập sai rồi</p>");
+            }
+            else {
+                document.write("<p>Bán kính = " + bankinh + "</p>");
+                cv = 2 * pi * bankinh;
+                dt = pi * bankinh * bankinh;
+                document.write("<p>Chu vi = " + cv + "</p>");
+                document.write("<p>Dien tich = " + dt + "</p>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

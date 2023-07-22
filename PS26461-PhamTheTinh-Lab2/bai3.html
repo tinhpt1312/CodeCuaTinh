@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>Phạm Thế Tình - Ps26461</title>
+    <meta charset="UTF-8">
+    <script>
+        var a = prompt("Nhập số a: ");
+        var b = prompt("Nhập số b: ");
+        var c = prompt("Nhập số c: ");
+    </script>
+    <script>
+        var delta = Math.pow(b, 2) - 4 * a * c;
+    </script>
+    <style>
+        body {
+            width: auto;
+            height: auto;
+            background-color: pink;
+        }
+
+        .container {
+            border: 1px solid black;
+            width: 500px;
+            height: 180px;
+            border-radius: 15px;
+            margin: auto;
+            background-color: blue;
+            font-family: monospace;
+            font-size: larger;
+            color: yellow;
+        }
+
+        h3 {
+            text-align: center;
+            background-color: yellow;
+            margin: 0;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding: 10px;
+            font-size: x-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>GIẢI PHƯƠNG TRÌNH BẬC 2</h3>
+        <script>
+            if (isNaN(a) == true) {
+                document.write("Nhập sai rồi");
+            } else if (isNaN(b) == true) {
+                document.write("Nhập sai rồi");
+            } else if (isNaN(c) == true) {
+                document.write("Nhập sai rồi");
+            } else
+                if (delta < 0) {
+                    document.write(a);
+                    document.write("x<sup>2</sup> + ");
+                    document.write(b);
+                    document.write("x + ");
+                    document.write(c);
+                    document.write(" = 0");
+                    document.write("<p>Phương trình vô nghiệm</p>");
+                }
+                else if (delta == 0) {
+                    document.write(a);
+                    document.write("x<sup>2</sup> + ");
+                    document.write(b);
+                    document.write("x + ");
+                    document.write(c);
+                    document.write(" = 0");
+                    var nghiemkep = - b / (a * 2);
+                    document.write("<p>Phương trình có nghiệm kép = " + nghiemkep + "</p>");
+                }
+                else {
+                    document.write(a);
+                    document.write("x<sup>2</sup> + ");
+                    document.write(b);
+                    document.write("x + ");
+                    document.write(c);
+                    document.write(" = 0");
+                    var ngiemdon = (-b + Math.sqrt(delta)) / (2 * a);
+                    var nghiemdon = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.writeln("<p>Phương trình có 2 nghiệm là: </p>");
+                    document.writeln("<p>x1 = " + ngiemdon + "</p>");
+                    document.writeln("<p>x2 = " + nghiemdon + "</p>");
+                }
+        </script>
+    </div>
+</body>
+
+</html>

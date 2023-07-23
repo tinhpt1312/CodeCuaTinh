@@ -1,0 +1,65 @@
+<style>
+    .container {
+        width: 1140px;
+        margin: auto;
+        border: 1px solid darkgrey
+    }
+    main {
+        background: darkseagreen;
+        min-height: 400px;
+        position: relative;
+    }
+    #dongho{
+        position: absolute;
+        top: 200px;
+        left: 543px;
+        color: black;
+        font-family: monospace;
+        font-size: x-large;
+    }
+    #xam{
+        position: absolute;
+        color: wheat;
+        top: 10px;
+    }
+    button{
+        position: absolute;
+        top: 10px;
+        left: 200px;
+        height: 40px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <main>
+            <span id="xam">Bạn muốn dừng lại hãy nhấp: </span>
+            <span id="dongho" "></span>
+            <button onclick="startstopDH(); setTimeout()" >Nạp lại</button>
+            <img src="../PS26461-PhamTheTinh-ASM1/img/Itachi's slaughter of the uchiha_ Rework by me.png" width="100%">
+        </main>
+    </div>
+</body>
+<script>
+    var dh = null;
+    function tg(){
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s; 
+    }
+    dh = setInterval("tg()", 1000)
+    function startstopDH(){
+        if(dh==null) dh = setInterval("tg()", 1000);
+        else{
+            clearInterval(dh);
+            dh=null;
+        }
+    }
+    function loichao(){
+        alert('Hello');
+    }
+    setTimeout(loichao, 10000);
+</script>

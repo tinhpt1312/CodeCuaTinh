@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ptb2 = new Object();
+        ptb2.a = null;
+        ptb2.b = null;
+        ptb2.c = null;
+        ptb2.nhap = function () {
+            this.a = window.prompt("Nhập số a");
+            this.b = window.prompt("Nhập số b");
+            this.c = window.prompt("Nhập số c");
+            str = this.a + "x<sup>2</sup> + " + this.b + "x + " + this.c + " =0";
+            document.getElementById("pt").innerHTML = str;
+            document.getElementById("kq").innerHTML = "";
+        }
+        ptb2.giai = function () {
+            var delta = this.b * this.b - 4 * this.a * this.c;
+            if (delta < 0) {
+                str = "Phương trình vô nghiệm";
+                document.getElementById("kq").innerHTML = str;
+            } else if (delta == 0) {
+                var x0 = (-b / 2 * a);
+                document.getElementById("kq").innerHTML = x0;
+            } else if (delta > 0) {
+                var x1 = (-(this.b) + Math.sqrt(delta)) / (2 * (this.a));
+                var x2 = (-(this.b) - Math.sqrt(delta)) / (2 * (this.a));
+                str = "x1 = " + x1 + "<br><br>x2 = " + x2 ; 
+                document.getElementById("kq").innerHTML = str;
+            }
+        }
+    </script>
+    <style>
+        body{
+            height: 100vh;
+            width: auto;
+        }
+        .container {
+            border: 5px solid black;
+            border-radius: 20px;
+            width: 700px;
+            height: 300px;
+            position: relative;
+            margin: auto;
+            background-color: rgb(82, 228, 241);
+            position: relative;
+        }
+        h2 {
+            text-align: center;
+            margin: 0%;
+            border-top-left-radius: 17px;
+            border-top-right-radius: 17px;
+            padding: 15px;
+            font-size: xx-large;
+            color: yellow;
+            background-color: black;
+        }
+        .container #pt{
+            text-align: center;
+            font-size: x-large;
+            font-family: monospace;
+            margin-top: 25px;
+        }
+        .container #kq{
+            text-align: center;
+            font-size: x-large;
+            font-family: monospace;
+            margin-top: 25px;
+        }
+        #bt1{
+            position: absolute;
+            bottom: 30px;
+            left: 200px;
+            width: 110px;
+            height: 40px;
+            font-family: monospace;
+            font-size: large;
+        }
+        #bt2{
+            position: absolute;
+            bottom: 30px;
+            left: 400px;
+            width: 110px;
+            height: 40px;
+            font-family: monospace;
+            font-size: large;
+        }
+        button:hover{
+            background-color: black;
+            color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+        <div id="pt">Phương trình</div>
+        <div id="kq">Kết quả</div>
+        <div class="nut">
+            <button id= "bt1" onclick="ptb2.nhap()">Nhập A B C</button>
+            <button id= "bt2" onclick="ptb2.giai()">Giải PT</button>
+        </div>
+    </div>
+</body>
+
+</html>

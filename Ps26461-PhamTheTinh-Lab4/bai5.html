@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #listsach {
+            margin-left: 280px;
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        #listsach .rows {
+            display: grid;
+            grid-template-columns: 50px 300px 100px;
+            grid-template-rows: 30px;
+            background-color: aquamarine;
+            max-width: 450px;
+        }
+
+        #listsach .rows * {
+            border: 1px solid darkcyan;
+        }
+
+        .container {
+            border: 1px solid white;
+            margin: auto;
+            width: 1000px;
+            margin-top: 100px;
+            background-image: url(../Ps26461-PhamTheTinh-Lab4/img/book.jpg);
+            background-size: 100% 100%;
+        }
+
+        .container h2 {
+            font-size: 35px;
+            padding-top: 50px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        var sp1 = { tensp: "Nói với tuổi 20", gia: 35000, hinh: "sp1.jpg" };
+        var sp2 = { tensp: "Mùi hương trầm", gia: 120000, hinh: "sp2.jpg" };
+        var sp3 = { tensp: "Bích câu kỳ ngộ", gia: 300000, hinh: "sp2.jpg" };
+        var arr = [sp1, sp2, sp3];
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="text-align:center"> Danh Sách Sách</h2>
+        <div id="listsach">
+            <script>
+                for (i = 0; i < arr.length; i++) {
+                    document.write(`
+                <div class=rows>
+                    <span>${i + 1}</span>
+                    <span>${arr[i].tensp}</span>
+                    <span>${arr[i].gia}</span>
+                `)
+
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var w;//cửa sổ sẽ điều khiển
+        function moWin() {
+            w = window.open("thongtin.html", "tt", "width=700px,height=400px,top=50,left=600");
+            w.focus();
+        }
+        function dongWin() {
+            w = window.close("thongtin.html", "tt");
+            w.focus();
+        }
+        function dichuyen1chut() {
+            w.moveBy(5, 10);
+            w.focus();
+        }
+        function dichuyentoidiem() {
+            var x = prompt("Nhập X");
+            var y = prompt("Nhập Y");
+            w.moveTo(x, y);
+            w.focus();
+        }
+        function inan() {
+            w.print();
+        }
+    </script>
+    <style>
+        .container {
+            border: 1px solid black;
+            text-align: center;
+            width: 1000px;
+            margin: auto;
+            margin-top: 200px;
+            height: 200px;
+            font-family: monospace;
+            background-color: white;
+        }
+        body{
+            background-color: rgb(150, 180, 204);
+        }
+        button:hover{
+            background-color: blueviolet;
+            color: white
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            margin: 5px;
+            margin-top: 50px;
+        }
+        h1{
+            color: yellow;
+            background-color: black;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Thực hành với đối tượng Window</h1>
+        <button onclick="moWin()">
+            Mở win
+        </button>
+        <button onclick="inan()">
+            In ấn
+        </button>
+        <button onclick="dichuyen1chut()">
+            Di chuyển 1 chút
+        </button>
+        <button onclick="dichuyentoidiem()">
+            Di chuyển tới điểm
+        </button>
+        <button onclick="dongWin()">
+            Đóng win
+        </button>
+    </div>
+</body>
+
+</html>

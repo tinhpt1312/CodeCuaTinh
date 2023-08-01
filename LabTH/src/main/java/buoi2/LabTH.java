@@ -22,7 +22,7 @@ public class LabTH extends JFrame {
     
     private void initComponents(){
         setTitle("demo Swing code");
-        setSize(500, 350);
+        setSize(500, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         

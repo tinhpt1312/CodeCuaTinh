@@ -1,0 +1,65 @@
+body {
+    padding: 0px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    position: relative;
+}
+
+.shopping-mall {
+    position: absolute;
+    bottom: 20px;
+    font-variant: small-caps;
+}
+
+.shopping-mall>h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+
+.shopping-mall>h5 {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+.poly-cart{
+    margin-top: 5px;
+}
+
+.poly-cart ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-variant: small-caps;
+}
+
+.poly-cart .card-body strong{
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: 0 0 2px darkgray;
+}
+
+.poly-cart .card-body a{
+    text-decoration: none;
+}
+
+.poly-prod{
+    padding: 5px;
+}
+
+.poly-prod .card-body img{
+    /* height: 150px; */
+    max-width: 100%;
+}
+

@@ -7,6 +7,11 @@ body {
 header {
     position: relative;
 }
+nav{
+    background-color: yellow;
+    height: 50px;
+}
+
 
 .shopping-mall {
     position: absolute;

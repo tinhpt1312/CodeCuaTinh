@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/asm-css.css">
+
+<body ng-app="myapp" ng-controller="myctrl">
+  <!-- HEAD CAROUSEL -->
+  <div ng-include="'view-modules/head-carousel.html'"></div>
+  <!-- END HEAD CAROUSEL -->
+
+  <!-- HEADER -->
+  <div class="sticky-top" ng-include="'view-modules/navbar-header.html'"></div>
+  <!-- END HEADER -->
+  <ng-view></ng-view>
+
+  <script src="angular.min.js"></script>
+  <script src="code.angularjs.org_1.8.2_angular-route.min.js"></script>
+  <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/9b96cb475b.js" crossorigin="anonymous"></script>
+  <script src="Script.js"></script>
+</body>
+
+</html>

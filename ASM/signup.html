@@ -1,0 +1,71 @@
+  <!-- FORM ĐĂNG KÝ -->
+  <div class="container mt-3">
+    <p><a href="#!home" class="link-opacity-50" style="text-decoration: none;">Trang chủ</a> / Đăng nhập - Đăng ký</p>
+    <div class="row">
+      <div class="col-3">
+        <img src="images/sandisk-left-side.png" alt="">
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <form style="width: 100%;" name="formCheck">
+              <legend class="text-center mb-4" style="font-weight:bolder; font-size: 20px; color: #0A804A;">TẠO TÀI KHOẢN</legend>
+              <div class="mb-4">
+                  <input type="name" placeholder="Họ và tên"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="name" name="name"
+                      ng-model="name" required>
+                  <span class="ms-2 text-danger" ng-show="formCheck.name.$invalid">Vui lòng nhập tên</span>
+              </div>
+              <div class="mb-4">
+                  <input type="email" placeholder="Email"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="email" ng-model="email"
+                      name="email" required>
+                  <span class="ms-2 text-danger" ng-show="formCheck.email.$invalid">Vui lòng nhập email</span>
+              </div>
+              <div class="mb-4">
+                  <input type="number" placeholder="Số điện thoại"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="sdt" name="sdt" ng-model="sdt">
+                      <span class="ms-2 text-danger" ng-show="formCheck.sdt.$invalid">Vui lòng nhập số điện thoại</span>
+                  </div>
+              <div class="mb-4">
+                  <input type="date" placeholder="Ngày sinh"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="ngaysinh" ng-model="bday" name="bday" required>
+                      <span class="ms-2 text-danger" ng-show="formCheck.bday.$invalid">Vui lòng nhập ngày sinh</span>
+                  </div>
+              <div class="mb-4">
+                  <input type="password" placeholder="Mật khẩu"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="matkhau" ng-model="pass" name="pass" required>
+                      <span class="ms-2 text-danger" ng-show="formCheck.pass.$invalid">Vui lòng nhập mật khẩu</span>
+              </div>
+              <div class="mb-4">
+                  <input type="text" placeholder="Xác nhận mật khẩu"
+                      class="form-control border-0 border-bottom rounded-0 fw-lighter fs-6" id="confmatkhau" ng-model="cpass" name="cpass" required>
+                      <span class="ms-2 text-danger" ng-show="formCheck.name.$invalid">Vui lòng nhập tên</span>
+              </div>
+              <div class="mb-4 form-check ">
+                  <input type="checkbox" class="form-check-input rounded-0" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Tôi đồng ý với các điều khoản</label>
+              </div>
+      
+              <button type="submit" class="btn btn-success float-lg-end m-auto rounded-0">Đăng ký</button>
+          </form>
+      </div>
+      </div>
+      <div class="col-3">
+        <img src="images/samsung-mall-right-side.png" alt="" class="ms-5 float-end">
+      </div>
+    </div>
+    <!-- END FORM ĐĂNG KÝ -->
+
+    <!-- FOOTER -->
+    <div ng-include="'view-modules/footer.html'"></div>
+    <!-- END FOOTER -->
+  </div>
+
+  <script src="angular.min.js"></script>
+  <script src="code.angularjs.org_1.8.2_angular-route.min.js"></script>
+  <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/9b96cb475b.js" crossorigin="anonymous"></script>
+  <script src="Script.js"></script>
+</body>
+
+</html>

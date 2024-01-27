@@ -1,0 +1,130 @@
+<div class="container">
+    <div class="row mt-3">
+        <!-- DANH MỤC SẢN PHẨM -->
+        <div class="col-3 col-md-3 col-sm-6">
+            <div ng-include="'view-modules/catalouge.html'"></div>
+        </div>
+        <!-- END DANH MỤC SẢN PHẨM -->
+
+        <!-- SLIDESHOW SẢN PHẨM -->
+        <div class="col-9 col-md-9 col-sm-6">
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="images/back-to-school.png" class="d-block w-100"
+                                alt="Back to School giảm đến 30%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/msi.png" class="d-block w-100" alt="MSI tựu trường giảm giá đến 7 triệu">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/samsung-mall.png" class="d-block w-100"
+                                alt="Samsung Mall lưu trữ chỉ từ 230k">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/transcend.png" class="d-block w-100" alt="Đại tiệc lưu trữ Transcend">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/sandisk.png" class="d-block w-100" alt="Sandisk Flagship store">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4 col-xl-4 col-md-4 col-sm-6">
+                    <img src="images/o-cung-chinh-hang.png" class="img-fluid" alt="Ổ cứng chính hãng">
+                </div>
+                <div class="col-4 col-xl-4 col-md-4 col-sm-6">
+                    <img src="images/the-nho-chinh-hang.png" class="img-fluid" alt="Thẻ nhớ chính hãng">
+                </div>
+                <div class="col-4 col-xl-4 col-md-4 col-sm-6">
+                    <img src="images/arm-man-hinh.png" class="img-fluid" alt="Arm màn hình">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SLIDESHOW SẢN PHẨM -->
+
+    <!-- NỘI DUNG -->
+    <div class="row mt-3">
+        <div class="col-4">
+            <img src="images/laptop-vp.png" class="img-fluid" alt="Laptop văn phòng">
+            <img src="images/laptop-cpu-gen13.png" class="img-fluid mt-4" alt="Laptop CPU Gen 13">
+        </div>
+        <div class="col-4">
+            <img src="images/pc-sieu-toc.png" class="img-fluid" alt="PC siêu tốc">
+        </div>
+        <div class="col-4">
+            <img src="images/mini-pc.png" class="img-fluid" alt="Mini PC">
+            <img src="images/man-hinh-chinh-hang.png" class="img-fluid mt-4" alt="Màn hình chính hãng">
+        </div>
+    </div>
+    <!-- END NỘI DUNG -->
+
+    <!-- FLASHSALE -->
+    <!-- Flash sale title -->
+    <div class=" row mt-4">
+        <div class="col-6 col-md-6">
+            <h3 style="color: #0A804A;">Flash Sale Lưu Trữ Transcend <br> Deal Tốt Quà Xịn <img
+                    src="images/flashsale-hot.png">
+            </h3>
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="Tìm kiếm" ng-model="keyword">
+        </div>
+        <div class="col-3 col-md-3">
+            <div class="row justify-content-end">
+                <select class=" w-25 ms-3 w-75 form-select" aria-label="Default select example" ng-model="sapXep">
+                    <option selected value="">Mặc định</option>
+                    <option value="price">Giá từ thấp đến cao</option>
+                    <option value="-price">Giá từ cao đến thấp</option>
+                    <option value="name">Sắp xếp theo tên</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- End Flash sale title -->
+
+    <!-- Flash sale SP -->
+    <div class="row mt-3">
+        <div class="col-3" ng-repeat="sp in listSP | filter: keyword: false | orderBy: sapXep | limitTo: limit"><div class="card" style="width: 18rem; border:none;"><a href="#!chitietSP/{{sp.id}}"><img src="images/{{sp.image[0]}}.png" width="30%" class="card-img-top"></a><div class="card-body"><h5 class="card-title"><a href="#!{{sp.linkDetail}}" style="text-decoration: none; color: #0A804A;">{{sp.name}}</a></h5><p><span class="fw-bold fs-5" style="color: #0A804A;">{{sp.price_discount | currency: 'đ': 0}}</span>-<span style="text-decoration: line-through;">{{sp.price | currency: 'đ': 0}}</span></p></div></div></div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="button" class="btn rounded-0" style="background-color:#474747; width:200px;color: white;"
+            ng-click="showMore()">Xem
+            thêm</button>
+    </div>
+    <!-- Flash sale SP -->
+    <!-- END FLASHSALE -->
+
+    <!-- TIN TỨC -->
+    <div ng-include="'view-modules/news.html'"></div>
+    <!-- END TIN TỨC -->
+
+    <!-- FOOTER -->
+    <div ng-include="'view-modules/footer.html'"></div>
+</div>
+</div>

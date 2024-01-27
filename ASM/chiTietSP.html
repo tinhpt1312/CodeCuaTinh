@@ -1,0 +1,159 @@
+<div class="container mt-3">
+  <p><a href="main-page.html" class="link-opacity-50" style="text-decoration: none;">Trang chủ</a> / USB 256GB</p>
+  <div class="row">
+    <div class="col-4">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/{{sanpham.image[0]}}.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/{{sanpham.image[1]}}.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/{{sanpham.image[2]}}.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-8" ng-controller="addcart">
+      <p class="fw-bold fs-2" style="color: #0A804A;">{{sanpham.name}}</p>
+      Thương hiệu: <a href="">{{sanpham.brand}}</a> <br>
+      <p class="card-text fs-3 fw-bold" style="color: #0A804A;">{{sanpham.price_discount | currency: 'đ': 0}}<span
+          class="text-decoration-line-through ms-3 fs-5" style="color: black;">{{sanpham.price | currency: 'đ':
+          0}}</span> <span class="badge text-bg-danger ms-1">-{{(1 - (sanpham.price_discount / sanpham.price)) * 100 |
+          number: 0}} %</span></p>
+      <button class="btn btn-success fw-bold" ng-click="muaHang(sanpham)">MUA NGAY <i
+          class="fa-solid fa-cart-plus"></i></button>
+      <div class="mt-3 fs-6">
+        <p><i class="fa-regular fa-circle-check"></i> Loại: {{sanpham.loai}}</p>
+        <p><i class="fa-regular fa-circle-check"></i> Dung lượng: {{sanpham.dungLuong}}</p>
+        <p><i class="fa-regular fa-circle-check"></i> Kích thước: {{sanpham.kichThuoc}}</p>
+        <p><i class="fa-regular fa-circle-check"></i> Tốc độ đọc: {{sanpham.tocDoDoc}}</p>
+        <p><i class="fa-regular fa-circle-check"></i> Tốc độ ghi: {{sanpham.tocDoGhi}}</p>
+        <p><i class="fa-regular fa-circle-check"></i> Bảo hành: {{sanpham.baoHanh}}</p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-8">
+        <h3 class="fw-bold">ĐẶC ĐIỂM NỔI BẬT</h3>
+        <img src="images/{{sanpham.image[3]}}.png" class="w-100">
+        <div class="row mt-3">
+          <div class="col-8">
+            <h5 class="fw-bold">{{sanpham.name}}</h5> <br>
+            <h6 class="fw-bold">{{sanpham.detail_header1}}</h6>
+            <p>{{sanpham.detail1}}</p>
+          </div>
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[4]}}.png" width="240px">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[5]}}.png" width="240px">
+          </div>
+          <div class="col-8 mt-4">
+            <h6 class="fw-bold">{{sanpham.detail_header2}}</h6>
+            <p>{{sanpham.detail2}}</p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-8 mt-3">
+            <h6 class="fw-bold">{{sanpham.detail_header3}}</h6>
+            <p>{{sanpham.detail3}}</p>
+          </div>
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[6]}}.png" width="240px">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[7]}}.png" width="240px">
+          </div>
+          <div class="col-8 mt-4">
+            <h6 class="fw-bold">{{sanpham.detail_header4}}</h6>
+            <p>{{sanpham.detail4}}</p>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-8 mt-3">
+            <h6 class="fw-bold">{{sanpham.detail_header5}}</h6>
+            <p>{{sanpham.detail5}}</p>
+          </div>
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[8]}}.png" width="240px">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4 align-middle">
+            <img src="images/{{sanpham.image[9]}}.png" width="220px">
+          </div>
+          <div class="col-8 mt-2">
+            <h6 class="fw-bold">{{sanpham.detail_header6}}</h6>
+            <p>{{sanpham.detail6}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h3 class="fw-bold">THÔNG SỐ KỸ THUẬT</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Nhà sản xuất</th>
+              <td>{{sanpham.brand}}</td>
+            </tr>
+            <tr>
+              <th>Model</th>
+              <td>{{sanpham.model}}</td>
+            </tr>
+            <tr>
+              <th>Chuẩn giao tiếp</th>
+              <td>{{sanpham.chuanGiaoTiep}}</td>
+            </tr>
+            <tr>
+              <th>Dung lượng</th>
+              <td>{{sanpham.dungLuong}}</td>
+            </tr>
+            <tr>
+              <th>Kích thước</th>
+              <td>{{sanpham.kichThuoc}}</td>
+            </tr>
+            <tr>
+              <th>Hệ điều hành hỗ trợ</th>
+              <td>{{sanpham.heDieuHanh}}</td>
+            </tr>
+            <tr>
+              <th>Tốc độ đọc</th>
+              <td>{{sanpham.tocDoDoc}}</td>
+            </tr>
+            <tr>
+              <th>Tốc độ ghi</th>
+              <td>{{sanpham.tocDoGhi}}</td>
+            </tr>
+            <tr>
+              <th>Màu sắc</th>
+              <td>{{sanpham.mau}}</td>
+            </tr>
+            <tr>
+              <th>Bảo hành</th>
+              <td>{{sanpham.baoHanh}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END THÔNG TIN SẢN PHẨM -->
+
+  <!-- FOOTER -->
+  <div ng-include="'view-modules/footer.html'"></div>
+  <!-- END FOOTER -->
+</div>
